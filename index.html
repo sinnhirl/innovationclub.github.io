@@ -5,16 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>innovation club</title>
     <link rel="stylesheet" href="MAIN.css">
-    <style>
-        .introduction{
+    <style type="text/css">
+
+        /*文字设计*/
+        .title{
             color: antiquewhite;
+        }
+
+        /*导航栏*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+ 
+        #menu {
+            position: relative;
+            background-color: rgb(37, 50, 164);
+            width: 300%;
+            height: 60px;
+        }
+ 
+        .logo {
+            color: antiquewhite;
+            display: inline-block;
+            line-height: 58px;
+            position: absolute;
+            padding: 20 40px;
+            font-family:"仿宋";
+            font-weight: bold;
+        }
+ 
+        ul {
+            list-style: none;
+            display: inline-block;
+            padding-left: 140px;
+        }
+ 
+        ul li {
+            line-height: 60px;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+ 
+        a {
+            text-decoration: none;
+            color: antiquewhite;
+            display: block;
+            padding: 0 20px;
+            white-space: nowrap;
+            font-family:"仿宋";
+            font-weight: bold;
+        }
+ 
+        a:hover {
+            color: #ffffff;
+            background-color: #6291d4;
+        }
+ 
+        ul li ul li {
+            float: none;
+            margin-top: 2px;
+            background-color: #2d71d1;
+        }
+ 
+        ul li ul li a:hover {
+            color: #FFF;
+            background-color: #ccc;
+        }
+ 
+        ul li ul {
+            position: absolute;
+            left: 0;
+            top: 60px;
+            display: none;
+            padding-left: 0;
+        }
+       
+        ul li:hover ul {
+            display: block;
         }
     </style>
 </head>
 
-<body>
-    <main>
-        <p class="introduction">This webcite is used for innovation club in ISALiWan foreign language school.</p>
-    </main>
+<body><div id="menu">
+    <div class="logo">
+    </div>
+    <ul >
+        <li><a href="#">首页</a></li>
+        <li><a href="#">社团时间</a>
+            <ul>
+                <li><a href="#">社团时间安排</a></li>
+            </ul>
+        </li>
+        <li><a href="#">社团项目</a>
+            <ul>
+                <li><a href="#">“鱼菜共生”项目</a></li>
+                <li><a href="#">ICC全球发明大会中国站</a></li>
+            </ul>
+        </li>
+        <li><a href="#">科创空间使用说明</a>
+            <ul>
+                <li><a href="#">科创空间使用准则</a></li>
+                <li><a href="#">设备使用说明</a></li>
+            </ul>
+        </li>
+        <li><a href="#">社团成员</a>
+            <ul>
+                <li><a href="#">社团学员</a></li>
+                <li><a href="#">技术支持</a></li>
+            </ul>
+        </li>
+        <li><a href="#">关于我们</a>
+            <ul>
+                <li><a href="#">社团简介</a></li>
+                <li><a href="#">社团成就</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+        <!--<h1 class="title">innovation club</h1>-->
 </body>
 </html>
