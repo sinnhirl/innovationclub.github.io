@@ -1,140 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sinnhirl Wang's website</title>
     <link rel="stylesheet" href="MAIN.css">
-    <style type="text/css">
-
-        /*文字设计*/
-        .title{
-            color: antiquewhite;
-        }
-
-        /*导航栏*/
-        * {
-            margin: 0;
-            padding: 0;
-        }
- 
-        #menu {
-            position: relative;
-            background-color: rgb(10, 79, 87);
-            width: 300%;
-            height: 60px;
-        }
- 
-        .logo {
-            color: antiquewhite;
-            display: inline-block;
-            line-height: 58px;
-            position: absolute;
-            padding: 20 40px;
-            font-family:"仿宋";
-            font-weight: bold;
-        }
- 
-        ul {
-            list-style: none;
-            display: inline-block;
-            padding-left: 140px;
-        }
- 
-        ul li {
-            line-height: 60px;
-            text-align: center;
-            position: relative;
-            float: left;
-        }
- 
-        a {
-            text-decoration: none;
-            color: antiquewhite;
-            display: block;
-            padding: 0 20px;
-            white-space: nowrap;
-            font-family:"仿宋";
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #ffffff;
-            background-color: rgb(36, 64, 58);
-        }
- 
-        ul li ul li {
-            float: none;
-            margin-top: 2px;
-            background-color: #199280;
-        }
- 
-        ul li ul li a:hover {
-            color: #FFF;
-            background-color: #8adc9e;
-        }
- 
-        ul li ul {
-            position: absolute;
-            left: 0;
-            top: 60px;
-            display: none;
-            padding-left: 0;
-        }
-       
-        ul li:hover ul {
-            display: block;
-        }
-    </style>
+    <!-- <script type="text/javascript" src="jquery-3.7.1.min.js"></script> -->
 </head>
 
-<body><div id="menu">
-    <div class="logo">
+<body> 
+    <!-- <div id="headerContent">
+
     </div>
-    <ul >
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Self-introduction</a>
-            <!--<ul>
-                <li><a href="#"></a></li>
-            </ul>-->
-        </li>
-        <li><a href="#">Interesting proggramming</a>
-            <ul>
-                <li><a href="./DFT.html">drawing with fourier Transfer</a></li>
+
+    <script>
+        $(function(){
+          $("#headerContent").load("home.html");
+          // $("#footerContent").load("footer.html");
+        });
+    </script> -->
+    <header>
+        <div id="menu">
+            <!-- <div class="logo">
+            </div> -->
+            <ul >
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Self-introduction</a>
+                    <!--<ul>
+                        <li><a href="#"></a></li>
+                    </ul>-->
+                </li>
+                <li><a href="#">Interesting proggramming</a>
+                    <ul>
+                        <li><a href="./DFT.html">drawing with fourier Transfer</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CAS</a>
+                    <ul>
+                        <li><a href="#">CAS experience</a></li>
+                        <li><a href="#">CAS project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">IA</a>
+                    <ul>
+                        <li><a href="#">subject a</a></li>
+                        <li><a href="#">subject b</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">EE</a>
+                    <ul>
+                        <li><a href="#">the idea</a></li>
+                        <li><a href="#">content</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">TOK</a>
+                    <ul>
+                        <li><a href="#">the idea</a></li>
+                        <li><a href="#">exibition</a></li>
+                        <li><a href="#">essay</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">about me</a>
+                    <!--<ul>
+                        <li><a href="#">how to </a></li>
+                    </ul>-->
+                </li>
             </ul>
-        </li>
-        <li><a href="#">CAS</a>
-            <ul>
-                <li><a href="#">CAS experience</a></li>
-                <li><a href="#">CAS project</a></li>
-            </ul>
-        </li>
-        <li><a href="#">IA</a>
-            <ul>
-                <li><a href="#">subject a</a></li>
-                <li><a href="#">subject b</a></li>
-            </ul>
-        </li>
-        <li><a href="#">EE</a>
-            <ul>
-                <li><a href="#">the idea</a></li>
-                <li><a href="#">content</a></li>
-            </ul>
-        </li>
-        <li><a href="#">TOK</a>
-            <ul>
-                <li><a href="#">the idea</a></li>
-                <li><a href="#">exibition</a></li>
-                <li><a href="#">essay</a></li>
-            </ul>
-        </li>
-        <li><a href="#">about me</a>
-            <!--<ul>
-                <li><a href="#">how to </a></li>
-            </ul>-->
-        </li>
-    </ul>
-    </div>
-        <!--<h1 class="title">innovation club</h1>-->
+        </div>
+    </header>
 </body>
 </html>
