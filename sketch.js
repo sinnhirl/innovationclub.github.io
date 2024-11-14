@@ -1,12 +1,32 @@
 let time = 0;
+let timerate = 0.05;
 let wave = [];/*设定一个数组用于储存Y值*/
 let WaveNums = 2;
+let radiusBasic = 75;
+let State = true;
 
 function setup(){
     createCanvas(600,400);
 }
-function getNum (){
+function getNum(){
     WaveNums = document.getElementById("num").value;
+}
+function getTime(){
+    if(timerate > 0){
+    timerate = (float)(document.getElementById("time").value);
+    }
+}
+function getRadius(){
+    radiusBasic = (int)(document.getElementById("radius").value);
+}
+function changeState(){
+    if(State == true){
+        State = false;
+    }else{
+        if(State == false){
+            State = true;
+        }
+    }
 }
 
 function draw(){
@@ -16,11 +36,11 @@ function draw(){
     /*试图写出一个按照半径运动的点，试图把极坐标系用笛卡尔表示*/ 
     let x =0;
     let y =0;
-    for(let i = 0; i < WaveNums; i++){//此处I小于几的值决定了有几个圆
+    for(let i = 0; i < WaveNums; i++){//此处i小于几的值决定了有几个圆
         let prevx = x;//让X取上一个值
         let prevy = y;//让Y取上一个值
         let n = i * 2 + 1;
-        let radius = 75 * (4/ (n * PI));//75是半径的基数，后面的是公式
+        let radius = radiusBasic * (4/ (n * PI));//75是半径的基数，后面的是公式
         x += radius * cos(n*time);/*由于4*sinθ/pi是一个正常的圆，得出结论*/
         y += radius * sin(n*time);/*点的X,Y坐标*/
 
@@ -43,12 +63,17 @@ function draw(){
     // fill(255);测试
     noFill();
     for(let i = 0; i < wave.length; i++){/*尽可能多的获取Y值*/
-        // point(i,wave[i]);point 可以用于测试输出一个个点
+        if(State == true){
         vertex(i,wave[i]);
+        }else{
+            if(State == false){
+                point(i,wave[i]);//point 可以用于测试输出一个个点
+            }
+        }
     }
     endShape();
 
-    time += 0.05;
+    time = time + timerate;
 
     if(wave.length>250){/*判断点是否过多，删掉点节省内存*/
         wave.pop();/*删除最后的点*/
