@@ -4,15 +4,86 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <link rel="import" href="index.html">
     <link rel="stylesheet" type="text/css" href="MAIN.css">
     <meta charset="utf-8" />
     <title>Fourier Transfer</title>
   </head>
+  <!-- <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("#headerContent").load("index.html");
+      // $("#footerContent").load("footer.html");
+    });
+  </script> -->
   <body>
-    <h4>Numbers of wave</h4>
-    <input id="num" type="number">
-    <button onclick="getNum()">submit</button>
-    <script src="sketch.js"></script>
+    <header>
+      <div id="menu">
+          <!-- <div class="logo">
+          </div> -->
+          <ul >
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#">Self-introduction</a>
+                  <!--<ul>
+                      <li><a href="#"></a></li>
+                  </ul>-->
+              </li>
+              <li><a href="#">Interesting proggramming</a>
+                  <ul>
+                      <li><a href="./DFT.html">drawing with fourier Transfer</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">CAS</a>
+                  <ul>
+                      <li><a href="#">CAS experience</a></li>
+                      <li><a href="#">CAS project</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">IA</a>
+                  <ul>
+                      <li><a href="#">subject a</a></li>
+                      <li><a href="#">subject b</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">EE</a>
+                  <ul>
+                      <li><a href="#">the idea</a></li>
+                      <li><a href="#">content</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">TOK</a>
+                  <ul>
+                      <li><a href="#">the idea</a></li>
+                      <li><a href="#">exibition</a></li>
+                      <li><a href="#">essay</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">about me</a>
+                  <!--<ul>
+                      <li><a href="#">how to </a></li>
+                  </ul>-->
+              </li>
+          </ul>
+      </div>
+    </header>
+    
+    <!-- <header id="headerContent"></header> -->
+    <div id="control">
+      <h4>Numbers of wave</h4>
+      <input id="num" type="number">
+      <button onclick="getNum()">submit</button>
+      <h4>Time rate</h4>
+      <input id="time" type="number" min="0.00" step="0.01">
+      <button onclick="getTime()">submit</button>
+      <h4>Radius</h4>
+      <input id="radius" type="number">
+      <button onclick="getRadius()">submit</button>
+      <h4>State</h4>
+      <button onclick="changeState()">change</button>
+    </div>
 
+    <div id="draw">
+      <script src="sketch.js"></script>
+    </div>
   </body>
 </html>
